@@ -21,6 +21,7 @@
       true,
       "rxjs/Rx"
     ],
+    "whitespace": false,
     "import-spacing": true,
     "indent": {
       "options": [
@@ -65,8 +66,8 @@
       "as-needed"
     ],
     "quotemark": [
-      true,
-      "single"
+      false,
+      "double"
     ],
     "semicolon": {
       "options": [
@@ -111,16 +112,7 @@
         "allow-pascal-case"
       ]
     },
-    "whitespace": {
-      "options": [
-        "check-branch",
-        "check-decl",
-        "check-operator",
-        "check-separator",
-        "check-type",
-        "check-typecast"
-      ]
-    },
+    
     "component-class-suffix": true,
     "contextual-lifecycle": true,
     "directive-class-suffix": true,
