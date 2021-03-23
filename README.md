@@ -34,8 +34,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - make sure to have `import { FormGenBS } from '@harlock123/formgen-lib';`
 <p>*with the other imports at the top. If there is already a reference to the old form-gen-lib from yore. Remove it.*</p>
 
-- make sure to have 'import { FormgenLibModule } from '@harlock123/formgen-lib';`
-<p>* in the app.module.ts file. If there is one for the old form-ger-lib. remove it</p>
+- make sure to have `import { FormgenLibModule } from '@harlock123/formgen-lib;`
+<p>* in the app.module.ts file. If there is one for the old form-gen-lib. remove it</p>
 
 - Now in the screener component the process will depend on how much or how little of the old formgen library was used. 
 
