@@ -28,14 +28,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Implemenmting this new Formgen in an existing ASCA Project
 
-- `npm i @harlock123/formgen-lib`
-<p> _will install the latest version of the library from NPM_ </p>
+- `npm i @harlock123/formgen-lib`<p></p>
+_will install the latest version of the library from NPM_
 
-- make sure to have `import { FormGenBS } from '@harlock123/formgen-lib';`
-<p> _with the other imports at the top. If there is already a reference to the old form-gen-lib from yore. Remove it._ </p>
+- make sure to have `import { FormGenBS } from '@harlock123/formgen-lib';`<p></p>
+_with the other imports at the top. If there is already a reference to the old form-gen-lib from yore. Remove it._
 
-- make sure to have `import { FormgenLibModule } from '@harlock123/formgen-lib;`
-<p>* in the app.module.ts file. If there is one for the old form-gen-lib. remove it</p>
+- make sure to have `import { FormgenLibModule } from '@harlock123/formgen-lib;`<p></p>
+_in the app.module.ts file. If there is one for the old form-gen-lib. remove it_
 
 - Now in the screener component the process will depend on how much or how little of the old formgen library was used. 
 
