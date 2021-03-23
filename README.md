@@ -29,6 +29,19 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Implemenmting this new Formgen in an existing ASCA Project
 
 - `npm i @harlock123/formgen-lib`
-<p>-will install the latest version of the library from NPM-</p>
+<p>*will install the latest version of the library from NPM*</p>
 
+- make sure to have `import { FormGenBS } from '@harlock123/formgen-lib';`
+<p>*with the other imports at the top. If there is already a reference to the old form-gen-lib from yore. Remove it.*</p>
+
+- make sure to have 'import { FormgenLibModule } from '@harlock123/formgen-lib';`
+<p>* in the app.module.ts file. If there is one for the old form-ger-lib. remove it</p>
+
+- Now in the screener component the process will depend on how much or how little of the old formgen library was used. 
+
+- Formgen will now automatically colorize dropdown combo boxes when invalidated, There used to be excess code to do that outside in screeners.component.ts. 
+
+- Formgen will now handle PLEASE SELECT in dropdown boxes as unset for validation rules
+
+- Formgen has a new method to set the score for a form it takes the CONCEPT ID of the field to carry the score as a string and the score to set as a number. Callable using... `this.formGenBS.SetFormScore('581065',this.formGenBS.GetFormScore())`  *taken from Missouri as an example*
 
