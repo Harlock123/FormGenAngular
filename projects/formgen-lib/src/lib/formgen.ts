@@ -1645,6 +1645,25 @@ export class FormGenBS {
     }
 
     /**
+     * SetFormScore
+     *
+     * will attempt to set the value of a field with the ID of ElToHoldTheScore
+     * to the value of the supplied score argument
+     * @param ElToHoldTheScore: string
+     * @param score: number
+     * 
+     */
+    public SetFormScore(ElToHoldTheScore: string, score: number)
+    {
+        var el = <HTMLInputElement>(document.getElementById(ElToHoldTheScore));
+
+        if(el!== null)
+        {
+            el.value = score.toString();
+        }
+    }
+
+    /**
      * GetFormScore
      *
      * Walks the forms content and for elements that had a weight to be applied to them in the SCORE Array for the element will
@@ -1803,6 +1822,9 @@ export class FormGenBS {
                         {
                             var del = <HTMLElement>(document.getElementById("div_" + THEEL.elID));
 
+                            console.log(del);
+                            console.log(del.style);
+                            
                             if (!del.hidden) {
 
                                 var el = <HTMLInputElement>(document.getElementById(THEEL.elID));
@@ -1922,7 +1944,7 @@ export class FormGenBS {
                         {
                             var del = <HTMLElement>(document.getElementById("div_" + THEEL.elID));
 
-                            if (!del.hidden) {
+                            if (!del.hidden ) {
 
                                 var eli = <HTMLSelectElement>(document.getElementById(THEEL.elID));
 
@@ -1931,8 +1953,8 @@ export class FormGenBS {
 
 
                                 var seltext = eli.options[eli.selectedIndex].text;
-
-                                if (seltext + "" === "") {
+                                
+                                if (seltext + "" === "" || seltext.toUpperCase() === "PLEASE SELECT") {
                                     isvalid = false;
 
                                     eli.classList.add("is-invalid");
@@ -1993,7 +2015,28 @@ export class FormGenBS {
             }
         }
 
+        // /**Validation for Dropdowns */
+        for (let THEEL of FormGenBS.theUIElements) {
+            if (THEEL.elRequired === true) {
+                const id = THEEL.elID;
+                
+                if (THEEL.elType.toUpperCase() === 'DROPDOWN') {
+                    const html = <HTMLInputElement>document.getElementById(id);
+                    const htmlname = document.getElementsByName(id);
 
+                    if (html !== null) {
+                        if (html.value === '') {
+                            html.classList.add('is-invalid');
+                        } else {
+                            html.classList.remove('is-invalid');
+                            for (let ddval = 0; ddval < htmlname.length; ddval++) {
+                                htmlname[ddval].classList.remove('is-invalid');
+                            }
+                        }
+                    }
+                } 
+            }
+        }
         return isvalid;
     }
 
