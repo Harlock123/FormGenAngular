@@ -53,6 +53,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   "sideEffects": false
 }`
 
+- then cd into the dist/formgen-lib folder
+- npm publish
 
 ## Implementing this new Formgen in an existing ASCA Project
 
