@@ -37,6 +37,10 @@ _with the other imports at the top. If there is already a reference to the old f
 - make sure to have `import { FormgenLibModule } from '@harlock123/formgen-lib;`<p></p>
 _in the app.module.ts file. If there is one for the old form-gen-lib. remove it_
 
+- make sure to have FormgenLibModule firther down in the app.module.ts file as well<p></p>
+_in the app.module.ts file. If there is one for the old form-gen-lib. remove it_
+
+
 - Now in the screener component the process will depend on how much or how little of the old formgen library was used. 
 
 - Formgen will now automatically colorize dropdown combo boxes when invalidated, There used to be excess code to do that outside in screeners.component.ts. 
