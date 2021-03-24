@@ -26,7 +26,35 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Implemenmting this new Formgen in an existing ASCA Project
+## Building for a new NPM release
+- Clone and adjust the source accordingly to desires
+- ng build    (from the root of the repository)
+- In the dist/formgen-lib folder edit the package.json file
+- - Set the name, the version, and the two angular dependancy settings appropriately
+- Example Below
+
+`{
+  "name": "@harlock123/formgen-lib",
+  "version": "6.0.16",
+  "peerDependencies": {
+    "@angular/common": "^9.1.0",
+    "@angular/core": "^9.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/formgen-lib.umd.js",
+  "module": "fesm2015/formgen-lib.js",
+  "es2015": "fesm2015/formgen-lib.js",
+  "esm2015": "esm2015/formgen-lib.js",
+  "fesm2015": "fesm2015/formgen-lib.js",
+  "typings": "formgen-lib.d.ts",
+  "metadata": "formgen-lib.metadata.json",
+  "sideEffects": false
+}`
+
+
+## Implementing this new Formgen in an existing ASCA Project
 
 - `npm i @harlock123/formgen-lib`<p></p>
 _will install the latest version of the library from NPM_
