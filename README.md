@@ -79,3 +79,5 @@ _in the app.module.ts file. If there is one for the old form-gen-lib. remove it_
 
 - Formgen has a new method to set the score for a form it takes the CONCEPT ID of the field to carry the score as a string and the score to set as a number. Callable using... `this.formGenBS.SetFormScore('581065',this.formGenBS.GetFormScore())`  *taken from Missouri as an example*
 
+- Formgen will now consult TEXT entries for their initial visibility and if they were initially invisible the will not contribute to form validity checks regardless if their requires setting is on. This is a stop gap measire until we fogure out how to know if an element is currently visible. The old ele.visible check no longer works in current upmodel DOM controllers... So this check may introduce problems, but for its current use cases (Where we have a plethora of SCORE values on screeners that are text elements and are not visible. This will work. Tested in NE, MO, and WV)
+
