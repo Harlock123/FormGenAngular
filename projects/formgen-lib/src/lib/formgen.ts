@@ -1821,11 +1821,8 @@ export class FormGenBS {
                     case "TEXT":
                         {
                             var del = <HTMLElement>(document.getElementById("div_" + THEEL.elID));
-
-                            console.log(del);
-                            console.log(del.style);
-                            
-                            if (!del.hidden) {
+                                                        
+                            if (THEEL.elInitialVisibility) { //(!del.hidden) {
 
                                 var el = <HTMLInputElement>(document.getElementById(THEEL.elID));
 
