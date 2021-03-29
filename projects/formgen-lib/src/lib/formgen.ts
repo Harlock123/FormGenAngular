@@ -15,6 +15,8 @@ export class FormGenBS {
     private AllowInteractions: boolean = true;
     private TheInputIDs: string[] = [];
 
+    private TheCurrentNumberOfInputElements = 0;
+
     constructor() {
 
         // set the form version here
@@ -107,17 +109,9 @@ export class FormGenBS {
         }
 
         FROWS.push(cnt);
-        // for (let i = FROWS.length; i < UIElements.length; i++) {
-        //    FROWS.push(cnt);
-        //    FROWS.push(cnt);
-        //    FROWS.push(cnt);
-        //    FROWS.push(cnt);
-        //    FROWS.push(cnt);
-        // }
+        
         cnt = 0;
-
-        // for (let i = FROWS.length; i < UIElements.length; i++) { FROWS.push(cnt); FROWS.push(cnt); FROWS.push(cnt); FROWS.push(cnt); }
-
+        
         // we now have an array of numbers the ordinal position in that array has the number of
         // elements that are in that forms row as defined by the UIElements array handed in
         // Starting from 1 (The Zero element in the array should have 0 in it so its 1 based)
@@ -223,6 +217,8 @@ export class FormGenBS {
         var el = document.getElementById(this.theContainer);
         var innerhtml = '<div class="card-body"><form> ';
 
+        var InputElementTabCount = 0;
+
         var CURROW = 0;
 
         for (let CBTAG of BOOTSTRAPTAGS) {
@@ -304,6 +300,7 @@ export class FormGenBS {
 
                             if (!Array.isArray(THEEL.elInteractions) || !THEEL.elInteractions.length) {
                                 innerhtml += '<input type="text" class="' + CC + '" name = "' + THEEL.elID +
+                                    '" tabindex="' + InputElementTabCount + '" ' +
                                     '" id="' + THEEL.elID + '" style="' + THEEL.elFormStyle + '"  > ';
 
                             }
@@ -313,7 +310,9 @@ export class FormGenBS {
                                 }
 
                                 innerhtml += '<input type="text" class="' + CC + '" name = "' + THEEL.elID +
-                                    '" id="' + THEEL.elID + '" onchange="' + eventwirup + '" style="' + THEEL.elFormStyle + '" > ';
+                                    '" tabindex="' + InputElementTabCount + '" ' +
+                                    '" id="' + THEEL.elID + '" onchange="' + eventwirup + '" style="' + 
+                                    THEEL.elFormStyle + '" > ';
 
                             }
 
@@ -322,6 +321,8 @@ export class FormGenBS {
                             this.TheInputIDs.push(THEEL.elID);
 
                             innerhtml += '</div></div> ';
+
+                            InputElementTabCount += 1;
 
                             break;
 
@@ -376,6 +377,7 @@ export class FormGenBS {
 
                             if (!Array.isArray(THEEL.elInteractions) || !THEEL.elInteractions.length) {
                                 innerhtml += '<input type="date" class="' + CC + '" name = "' + THEEL.elID +
+                                    '" tabindex="' + InputElementTabCount + '" ' +
                                     '" id="' + THEEL.elID + '" style="' + THEEL.elFormStyle + '" > ';
                             }
                             else {
@@ -384,7 +386,9 @@ export class FormGenBS {
                                 }
 
                                 innerhtml += '<input type="date" class="' + CC + '" name = "' + THEEL.elID +
-                                    '" id="' + THEEL.elID + '" onchange="' + eventwirup + '" style="' + THEEL.elFormStyle + '" > ';
+                                    '" tabindex="' + InputElementTabCount + '" ' +
+                                    '" id="' + THEEL.elID + '" onchange="' + eventwirup + '" style="' + 
+                                    THEEL.elFormStyle + '" > ';
                             }
 
                             // store the ID for Interactivity processing
@@ -392,6 +396,8 @@ export class FormGenBS {
                             this.TheInputIDs.push(THEEL.elID);
 
                             innerhtml += '</div></div> ';
+
+                            InputElementTabCount += 1;
 
                             break;
 
@@ -446,16 +452,20 @@ export class FormGenBS {
                             }
 
                             if (!Array.isArray(THEEL.elInteractions) || !THEEL.elInteractions.length) {
-                                innerhtml += '<textarea rows="5" cols="40" class="' + CC + '" name="' + THEEL.elID + '" id="'
-                                    + THEEL.elID + '" style="' + THEEL.elFormStyle + '" ></textarea> ';
+                                innerhtml += '<textarea rows="5" cols="40" class="' + CC + '" name="' + THEEL.elID + 
+                                    '" id="' + THEEL.elID + 
+                                    '" tabindex="' + InputElementTabCount + '" ' +
+                                    '" style="' + THEEL.elFormStyle + '" ></textarea> ';
                             }
                             else {
                                 for (let v of THEEL.elInteractions) {
                                     this.theUIInteractions.push(v);
                                 }
 
-                                innerhtml += '<textarea rows="5" cols="40" class="' + CC + '" name="' + THEEL.elID + '" id="'
-                                    + THEEL.elID + '" onchange="' + eventwirup + '" style="' + THEEL.elFormStyle + '" ></textarea> ';
+                                innerhtml += '<textarea rows="5" cols="40" class="' + CC + '" name="' + THEEL.elID + 
+                                    '" id="' + THEEL.elID + 
+                                    '" tabindex="' + InputElementTabCount + '" ' +
+                                    '" onchange="' + eventwirup + '" style="' + THEEL.elFormStyle + '" ></textarea> ';
                             }
 
                             // store the ID for Interactivity processing
@@ -463,6 +473,8 @@ export class FormGenBS {
                             this.TheInputIDs.push(THEEL.elID);
 
                             innerhtml += '</div></div> ';
+
+                            InputElementTabCount += 1;
 
                             break;
 
@@ -528,6 +540,7 @@ export class FormGenBS {
                                     innerhtml += '<input type="radio" class="' + CC + '" ' +
                                         'name = "' + THEEL.elID + '" id="' +
                                         THEEL.elID + '_' + i.toString() + '" ' +
+                                        ' tabindex="' + InputElementTabCount + '" ' +
                                         'value="' + v + '" style="' + THEEL.elFormStyle + '" >';
                                     innerhtml += '<label for="' + THEEL.elID + '_' + i.toString() + '" class="custom-control-label" >' + v + '</label>';
                                 }
@@ -538,6 +551,7 @@ export class FormGenBS {
                                     innerhtml += '<input type="radio" class="' + CC + '" ' +
                                         'name = "' + THEEL.elID + '" id="' +
                                         THEEL.elID + '_' + i.toString() + '" ' +
+                                        ' tabindex="' + InputElementTabCount + '" ' +
                                         'value="' + v + '" onchange="' + eventwirup + '" style="' + THEEL.elFormStyle + '" >';
                                     innerhtml += '<label for="' + THEEL.elID + '_' + i.toString() + '" class="custom-control-label" >' + v + '</label>';
                                 }
@@ -547,6 +561,8 @@ export class FormGenBS {
                                 this.TheInputIDs.push(THEEL.elID + '_' + i.toString());
 
                                 innerhtml += "</div>";
+
+                                InputElementTabCount += 1;
                             }
 
                             innerhtml += '</div></div> ';
@@ -606,7 +622,8 @@ export class FormGenBS {
 
                             if (!Array.isArray(THEEL.elInteractions) || !THEEL.elInteractions.length) {
                                 innerhtml += '<select name="' + THEEL.elID + '" class="' + CC + '"  id="' +
-                                    THEEL.elID + '" style="' + THEEL.elFormStyle + '" >';
+                                    THEEL.elID + '" tabindex="' + InputElementTabCount + '" ' + 
+                                    '" style="' + THEEL.elFormStyle + '" >';
                             }
                             else {
                                 for (let v of THEEL.elInteractions) {
@@ -615,6 +632,7 @@ export class FormGenBS {
 
                                 innerhtml += '<select name="' + THEEL.elID +
                                     '" class="' + CC + '" id="' + THEEL.elID +
+                                    '" tabindex="' + InputElementTabCount + '" ' +
                                     '" onchange="' + eventwirup + '" style="' + THEEL.elFormStyle + '" >';
                             }
 
@@ -636,6 +654,8 @@ export class FormGenBS {
                             innerhtml += '</select>';
 
                             innerhtml += '</div></div> ';
+
+                            InputElementTabCount += 1;
 
                             break;
 
@@ -700,6 +720,7 @@ export class FormGenBS {
                                     innerhtml += '<input type="checkbox" ' +
                                         'name = "' + THEEL.elID + '" class="' + CC + '"  id="' +
                                         THEEL.elID + '_' + i.toString() + '" ' +
+                                        ' tabindex="' + InputElementTabCount + '" ' +
                                         'value="' + v + '" style="' + THEEL.elFormStyle + '" >';
                                     innerhtml += '<label for="' + THEEL.elID + '_' + i.toString() + '" class="custom-control-label"  >' + v + '</label>';
                                 }
@@ -710,6 +731,7 @@ export class FormGenBS {
                                     innerhtml += '<input type="checkbox" ' +
                                         'name = "' + THEEL.elID + '" class="' + CC + '"  id="' +
                                         THEEL.elID + '_' + i.toString() + '" ' +
+                                        ' tabindex="' + InputElementTabCount + '" ' +
                                         'value="' + v + '" onchange="' + eventwirup + '" style="' + THEEL.elFormStyle + '" >';
                                     innerhtml += '<label for="' + THEEL.elID + '_' + i.toString() + '" class="custom-control-label" >' + v + '</label>';
                                 }
@@ -719,6 +741,8 @@ export class FormGenBS {
                                 this.TheInputIDs.push(THEEL.elID + '_' + i.toString());
 
                                 innerhtml += "</div>";
+
+                                InputElementTabCount += 1;
                             }
 
                             innerhtml += '</div></div> ';
@@ -1094,6 +1118,14 @@ export class FormGenBS {
             }
 
         }
+
+        // So we have something to be able to notify other controls where to pickup
+        // for TAB ORDER
+        this.TheCurrentNumberOfInputElements = InputElementTabCount;
+    }
+
+    public GetHighestTabOrderCurrently() {
+        return this.TheCurrentNumberOfInputElements;
     }
 
     setData(VersionString, DomElementID, JSobjectName, UIElements: UIElement[]){

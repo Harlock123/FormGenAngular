@@ -1,9 +1,9 @@
 {
-  "name": "formgen-lib",
-  "version": "6.0.1",
+  "name": "@harlock123/formgen-lib",
+  "version": "6.0.20",
   "peerDependencies": {
-    "@angular/common": "^11.0.0",
-    "@angular/core": "^11.0.0"
+    "@angular/common": "^9.1.0",
+    "@angular/core": "^9.1.0"
   },
   "dependencies": {
     "tslib": "^2.0.0"
