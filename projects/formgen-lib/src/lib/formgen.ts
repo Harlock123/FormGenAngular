@@ -1831,6 +1831,84 @@ export class FormGenBS {
 
         return score;
     }
+    
+    /**
+     * calculateHeightInInches
+     *
+     * 
+     *   @Newheight return Newheight as a number.
+     *   @param ElToHoldTheHeight: string
+     *   @param ElToHoldTheHightLb: string
+     *   @param inches: number
+     *   @param age: number
+     *   @param Heightvaluehtml: string
+     *   @param HeightChildvaluehtml: string
+     *   @param Heightvaluehtml: string
+     *   @param member_type: string
+     */
+   public DocalculateHeightInInches(ElToHoldTheHeight: string, ElToHoldTheHightLb: string, inches: number, age: number ,
+    Heightvaluehtml: string, HeightChildvaluehtml: string, member_type: string) {
+        var Newheight: number = 0;
+        var Newinches: number = 0;
+        var height: number = 0;
+        var heightIn: string= '';
+        var heightInResult: string= '';
+        
+        let Heightvalue;
+        var heightInInches: number = 0;
+        var heightele = (<HTMLSelectElement>document.getElementById(ElToHoldTheHeight));
+        var heightlabel = document.getElementById(ElToHoldTheHightLb);
+        if (heightele !== null) {
+            var Inchvalue = heightele.value;
+            if (Inchvalue === '') {
+                inches = 0;
+            }
+
+        }
+        if (age >= 18) {
+            const Heightvaluehtml = <HTMLSelectElement>document.getElementById('HeightAdultvaluehtml');
+            Heightvalue = Heightvaluehtml.value;
+
+        } else {
+            const Heightvaluehtml = <HTMLSelectElement>document.getElementById('HeightChildvaluehtml');
+            // @ts-ignore
+            if (Heightvaluehtml !== null) {
+                Heightvalue = Heightvaluehtml.value;
+            }
+        }
+        if (Heightvalue === '') {
+            height = 0;
+        }
+        if (!isNaN(height) && height !== undefined && height > 0) {
+            Newheight = (Number(height) * 12);
+        }
+        if (!isNaN(inches) && inches !== undefined && inches > 0) {
+            Newinches = Number(inches);
+        }
+        if (Newheight !== undefined && Newinches !== undefined) {
+            Newheight = Newheight + Newinches;
+        }
+        if (member_type === 'Pediatric') {
+            heightIn = ' <label style="display:inline;">What is your child\'s height?</label>';
+        } else {
+            heightIn = ' <label style="display:inline;">What is your height?</label>';
+        }
+        if (Newheight !== undefined && Newheight !== 0) {
+            heightInResult = ' <span style="margin:0 5px; font-size:14px;font-style:italic;display:inline;border-radius:4px;' +
+                ' padding: 2px 8px;;border:1px ridge lightgrey;">Calculated Height = '
+                + Newheight + ' inches </span>';
+        }
+        if (heightlabel !== null) {
+            if (Newheight !== undefined && Newheight !== null && Newheight !== 0) {
+                heightlabel.innerHTML = heightIn + heightInResult + (' ');
+            } else {
+                heightlabel.innerHTML = heightIn + (' ');
+            }
+        }
+
+        heightInInches = Number(Newheight);
+        return Newheight;
+    }
 
     /**
      * IsFormValid
