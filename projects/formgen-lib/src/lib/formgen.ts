@@ -2596,6 +2596,80 @@ export class FormGenBS {
     private isVisible(e) {
         return !!(e.offsetWidth || e.offsetHeight || e.getClientRects().length);
     }
+
+    /**
+     * Will take a form and attempt to stuff the value of sesvar from session storage int the
+     * HTMLElement whose ID is idval
+     * Finally setting it to either be disabled or enabled via the disable boolean
+     * @param idval 
+     * @param sesvar 
+     * @param disable 
+     */
+    public DoPrePopulate(idval: string, sesvar: string, disable: boolean )
+    {
+        const prepop = <HTMLInputElement>document.getElementById(idval);
+        prepop.value = sessionStorage.getItem(sesvar);
+        prepop.disabled = disable;
+    }
+
+    // public DoFormPopulateFromUI_StringResult(UI_StringResult: string)
+    // {
+
+    //     var answers  = JSON.parse(UI_StringResult);
+
+    //     if (answers !== null) {
+    //       for (let a = 0; a < answers.data.length; a++) {
+    //         for (let i = 0; i < data.length; i++) {
+    //           if (this.answers.data[a].id === this.data[i].elID) {
+    //             if (this.data[i].elType.toUpperCase() === 'TEXT' || this.data[i].elType.toUpperCase() === 'NARRATIVE') {
+    //               const doc = <HTMLInputElement>document.getElementById('FormGenBody');
+    //               const html = <HTMLInputElement>document.getElementById(this.data[i].elID);
+    //               html.value = this.answers.data[a].value;
+
+    //             } else if (this.data[i].elType.toUpperCase() === 'DROPDOWN') {
+    //               const html = <HTMLInputElement>document.getElementById(this.data[i].elID);
+    //               const html2 = document.getElementsByName(this.data[i].elID);
+    //               html.value = html2[this.answers.data[a].value].innerText;
+    //             } else if (this.data[i].elType.toUpperCase() === 'RADIO') {
+    //               for (let i1 = 0; i1 < this.data[i].eloption.length; i1++) {
+    //                 if (this.data[i].eloption[i1] === this.answers.data[a].value) {
+    //                   const org_option = i1 + 1;
+
+    //                   const html = <HTMLInputElement>document.getElementById(this.data[i].elID + '_' + org_option);
+    //                   html.checked = true;
+    //                 }
+    //               }
+    //             } else if (this.data[i].elType.toUpperCase() === 'CHECKBOX') {
+    //               if (this.answers.data[a].value !== 'undefined') {
+    //                 const options = this.answers.data[a].value.split('| ');
+    //                 for (let opt = 0; opt < options.length; opt++) {
+
+    //                   const html = <HTMLInputElement>document.getElementById(this.data[i].elID + '_' + options[opt]);
+    //                   if (html !== null) { html.checked = true; }
+    //                 }
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    // }
+
+
+    public prepopulate(status) {
+        const prepop = <HTMLInputElement>document.getElementById('98');
+        prepop.value = sessionStorage.getItem('mbrfrstNm');
+        prepop.disabled = true;
+        
+        const prepopLname = <HTMLInputElement>document.getElementById('99');
+        prepopLname.value = sessionStorage.getItem('mbrlstNm');
+        prepopLname.disabled = true;
+        
+        
+        const prepopmembId = <HTMLInputElement>document.getElementById('509451');
+        prepopmembId.value = sessionStorage.getItem('sid');
+        prepopmembId.disabled = true;
+    
+    }
 }
 
 export class UIElement {
