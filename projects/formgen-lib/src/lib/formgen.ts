@@ -1839,18 +1839,19 @@ export class FormGenBS {
      *   @Newheight return Newheight as a number.
      *   @param ElToHoldTheHeight: string
      *   @param ElToHoldTheHightLb: string
-     *   @param inches: number
+     *   @param inches: string
+     *   @param height: string
      *   @param age: number
      *   @param Heightvaluehtml: string
      *   @param HeightChildvaluehtml: string
      *   @param Heightvaluehtml: string
      *   @param member_type: string
      */
-   public DocalculateHeightInInches(ElToHoldTheHeight: string, ElToHoldTheHightLb: string, inches: number, age: number ,
+   public DocalculateHeightInInches(ElToHoldTheHeight: string, ElToHoldTheHightLb: string, inches: string, height: string, age: number ,
     Heightvaluehtml: string, HeightChildvaluehtml: string, member_type: string) {
         var Newheight: number = 0;
         var Newinches: number = 0;
-        var height: number = 0;
+        //var height: string = '';
         var heightIn: string= '';
         var heightInResult: string= '';
         
@@ -1861,7 +1862,7 @@ export class FormGenBS {
         if (heightele !== null) {
             var Inchvalue = heightele.value;
             if (Inchvalue === '') {
-                inches = 0;
+                inches = '';
             }
 
         }
@@ -1877,12 +1878,12 @@ export class FormGenBS {
             }
         }
         if (Heightvalue === '') {
-            height = 0;
+            height = '';
         }
-        if (!isNaN(height) && height !== undefined && height > 0) {
+        if ( height !== undefined && height !== '') {
             Newheight = (Number(height) * 12);
         }
-        if (!isNaN(inches) && inches !== undefined && inches > 0) {
+        if  (inches !== undefined && inches !== '') {
             Newinches = Number(inches);
         }
         if (Newheight !== undefined && Newinches !== undefined) {
