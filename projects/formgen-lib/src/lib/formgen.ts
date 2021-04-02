@@ -280,7 +280,7 @@ export class FormGenBS {
                                 innerhtml += '<table>';
                                 innerhtml += '<td valign="top" class="text-red"> * </td>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -291,7 +291,7 @@ export class FormGenBS {
                                 innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
                                 innerhtml += '<table>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -357,7 +357,7 @@ export class FormGenBS {
                                 innerhtml += '<table>';
                                 innerhtml += '<td valign="top" class="text-red"> * </td>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -368,7 +368,7 @@ export class FormGenBS {
                                 innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
                                 innerhtml += '<table>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -433,7 +433,7 @@ export class FormGenBS {
                                 innerhtml += '<table>';
                                 innerhtml += '<td valign="top" class="text-red"> * </td>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -444,7 +444,7 @@ export class FormGenBS {
                                 innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
                                 innerhtml += '<table>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -512,7 +512,7 @@ export class FormGenBS {
                                 innerhtml += '<table>';
                                 innerhtml += '<td valign="top" class="text-red"> * </td>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '"  >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '"  >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -523,7 +523,7 @@ export class FormGenBS {
                                 innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
                                 innerhtml += '<table>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '"  >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '"  >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -600,7 +600,7 @@ export class FormGenBS {
                                 innerhtml += '<table>';
                                 innerhtml += '<td valign="top" class="text-red"> * </td>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -611,7 +611,7 @@ export class FormGenBS {
                                 innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
                                 innerhtml += '<table>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -692,7 +692,7 @@ export class FormGenBS {
                                 innerhtml += '<table>';
                                 innerhtml += '<td valign="top" class="text-red"> * </td>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -703,7 +703,7 @@ export class FormGenBS {
                                 innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
                                 innerhtml += '<table>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -771,7 +771,7 @@ export class FormGenBS {
                             }
 
                             innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
-                            innerhtml += '<label for="div_' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                            innerhtml += '<label for="div_' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                             innerhtml += THEEL.elLabel;
                             innerhtml += '</label> ';
 
@@ -817,7 +817,7 @@ export class FormGenBS {
                             }
 
                             innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
-                            innerhtml += '<label for="div_' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                            innerhtml += '<label for="div_' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                             innerhtml += THEEL.elLabel;
                             innerhtml += '</label>';
 
@@ -850,7 +850,7 @@ export class FormGenBS {
                             }
 
                             innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
-                            innerhtml += '<label for="div_' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                            innerhtml += '<label for="div_' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                             innerhtml += THEEL.elLabel;
                             innerhtml += '</label>';
 
@@ -888,7 +888,7 @@ export class FormGenBS {
                                 innerhtml += '<table style="width:100%">';
                                 innerhtml += '<td valign="top" class="text-red"> * </td>';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
@@ -900,7 +900,7 @@ export class FormGenBS {
                                 innerhtml += '<div class="form-group" id="' + 'div_' + THEEL.elID + '" ' + VIS + STY + ' >';
                                 innerhtml += '<table style="width: 100%">';
                                 innerhtml += '<td>';
-                                innerhtml += '<label for="' + THEEL.elID + '" style="' + THEEL.elLabelStyle + '" >';
+                                innerhtml += '<label for="' + THEEL.elID + '" style="white-space: normal;' + THEEL.elLabelStyle + '" >';
                                 innerhtml += THEEL.elLabel;
                                 innerhtml += '</label>';
                                 innerhtml += '</td>';
