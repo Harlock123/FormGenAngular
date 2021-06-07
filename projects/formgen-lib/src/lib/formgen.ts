@@ -1714,8 +1714,8 @@ export class FormGenBS {
                         var el = <HTMLInputElement>(document.getElementById(THEEL.elID));
 
                         if (el.value !== "") {
-                            var v = Number(el.dataset.fgscore);
-
+                            // var v = Number(el.dataset.fgscore);
+                            var v = Number(THEEL.elScore[0]);
                             if (isNaN(v))
                                 v = 0;
 
@@ -1729,7 +1729,8 @@ export class FormGenBS {
                         var el = <HTMLInputElement>(document.getElementById(THEEL.elID));
 
                         if (el.value !== "") {
-                            var v = Number(el.dataset.fgscore);
+                            // var v = Number(el.dataset.fgscore);
+                            var v = Number(THEEL.elScore[0]);
                             if (isNaN(v))
                                 v = 0;
 
@@ -1743,8 +1744,8 @@ export class FormGenBS {
                         var el = <HTMLInputElement>(document.getElementById(THEEL.elID));
 
                         if (el.value !== "") {
-                            var v = Number(el.dataset.fgscore);
-
+                            // var v = Number(el.dataset.fgscore);
+                            var v = Number(THEEL.elScore[0]);
                             if (isNaN(v))
                                 0;
 
@@ -1765,7 +1766,8 @@ export class FormGenBS {
                             var el = <HTMLInputElement>(document.getElementById(theid));
 
                             if (el.checked) {
-                                var v = Number(el.dataset.fgscore);
+                                // var v = Number(el.dataset.fgscore);
+                                var v = Number(THEEL.elScore[i-1]);
                                 if (isNaN(v))
                                     v = 0;
                                 score += v;
@@ -1789,7 +1791,8 @@ export class FormGenBS {
                             if (vv === seltext) {
                                 var eli1 = <HTMLOptionElement>(document.getElementById(THEEL.elID + '_' + i.toString()));
 
-                                var v = Number(eli1.dataset.fgscore);
+                                // var v = Number(eli1.dataset.fgscore);
+                                var v = Number(THEEL.elScore[i-1]);
 
                                 if (isNaN(v))
                                     v = 0;
@@ -1815,8 +1818,8 @@ export class FormGenBS {
                             var el = <HTMLInputElement>(document.getElementById(theid));
 
                             if (el.checked) {
-                                var v = Number(el.dataset.fgscore);
-
+                                // var v = Number(el.dataset.fgscore);
+                                var v = Number(THEEL.elScore[i-1]);
                                 if (isNaN(v))
                                     v = 0;
                                 score += v;
