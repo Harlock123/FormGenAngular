@@ -1851,7 +1851,7 @@ export class FormGenBS {
      *   @param member_type: string
      */
    public DocalculateHeightInInches(ElToHoldTheHeight: string, ElToHoldTheHightLb: string, inches: string, height: string, age: number ,
-    Heightvaluehtml: string, HeightChildvaluehtml: string, member_type: string) {
+    HeightAdultvaluehtml: string, HeightChildvaluehtml: string, member_type: string) {
         var Newheight: number = 0;
         var Newinches: number = 0;
         //var height: string = '';
