@@ -2286,7 +2286,9 @@ export class FormGenBS {
                     }
                     else { // here we will process all the other UIinteraction types
 
-                        if (e.name === UIi.elIDSource) {
+                        // Change from Explicit eq to implicit eq to fix stupid 
+                        // Data issues IE === became ==
+                        if (e.name == UIi.elIDSource) {
 
                             switch (e.type.toUpperCase()) {
                                 case "RADIO":
