@@ -1870,11 +1870,11 @@ export class FormGenBS {
 
         }
         if (age >= 18) {
-            const Heightvaluehtml = <HTMLSelectElement>document.getElementById('HeightAdultvaluehtml');
+            const Heightvaluehtml = <HTMLSelectElement>document.getElementById(HeightAdultvaluehtml);
             Heightvalue = Heightvaluehtml.value;
 
         } else {
-            const Heightvaluehtml = <HTMLSelectElement>document.getElementById('HeightChildvaluehtml');
+            const Heightvaluehtml = <HTMLSelectElement>document.getElementById(HeightChildvaluehtml);
             // @ts-ignore
             if (Heightvaluehtml !== null) {
                 Heightvalue = Heightvaluehtml.value;
