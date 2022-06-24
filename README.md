@@ -54,6 +54,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 }`
 
 - then cd into the dist/formgen-lib folder
+
+- npm login     (do this first)
+    it will ask for your npm login name and password then email and send that email a =8 digit code to then type in
+    
+    lastly
+
 - npm publish
 
 ## Implementing this new Formgen in an existing ASCA Project
