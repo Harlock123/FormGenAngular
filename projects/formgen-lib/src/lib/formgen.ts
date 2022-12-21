@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Console } from 'console';
 
 @Injectable( {providedIn: 'root'} )
 
@@ -2316,6 +2317,8 @@ export class FormGenBS {
 
                                         var thetriggeredelement = document.getElementById("div_" + UIi.elIDTarget);
 
+                                        console.log(thetriggeredelement);
+                                                                                
                                         for (let i = 0; i < radios.length; i++) {
                                             var it = (<HTMLInputElement>radios[i]);
 
