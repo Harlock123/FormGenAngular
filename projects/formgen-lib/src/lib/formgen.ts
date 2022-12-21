@@ -2312,25 +2312,26 @@ export class FormGenBS {
                                     {
                                         var radios = document.getElementsByName(e.name);
 
+                                        var showit = false;
+
+                                        var thetriggeredelement = document.getElementById("div_" + UIi.elIDTarget);
+
                                         for (let i = 0; i < radios.length; i++) {
                                             var it = (<HTMLInputElement>radios[i]);
 
                                             if (it.value === UIi.elValueTrigger || it.hidden) {
-                                                // we have the specific one that is supposed to trigger this action
-
-                                                // first lets get the thing we are gonna trigger
-
-                                                var thetriggeredelement = document.getElementById("div_" + UIi.elIDTarget);
-
+                                               
                                                 if (it.checked && UIi.elInteractionType === "SHOW") {
                                                     // we are gonna make sure something is visible
+
+                                                    showit = true;
 
                                                     thetriggeredelement.style.display = "";// "block";
 
                                                     // Try to break out of showing should allow multiple 
                                                     // checkboxes to show an element
 
-                                                    break;
+                                                    //break;
                                                 }
                                                 else {
                                                     if (it.checked && UIi.elInteractionType === "HIDE") {
@@ -2351,7 +2352,7 @@ export class FormGenBS {
                                                             // Try to break out of showing should allow multiple 
                                                             // checkboxes to show an element
 
-                                                            break;
+                                                            //break;
 
                                                         }
                                                         else {
@@ -2368,6 +2369,11 @@ export class FormGenBS {
                                                     }
                                                 }
                                             }
+                                        }
+
+                                        if (showit)
+                                        {
+                                            thetriggeredelement.style.display = "";// "block";
                                         }
 
                                         break;
