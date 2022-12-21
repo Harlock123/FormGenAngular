@@ -1,6 +1,6 @@
 {
   "name": "@harlock123/formgen-lib",
-  "version": "6.0.40",
+  "version": "6.0.41",
   "peerDependencies": {
     "@angular/common": "^9.1.0",
     "@angular/core": "^9.1.0"

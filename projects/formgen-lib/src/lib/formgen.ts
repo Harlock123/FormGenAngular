@@ -2326,6 +2326,11 @@ export class FormGenBS {
                                                     // we are gonna make sure something is visible
 
                                                     thetriggeredelement.style.display = "";// "block";
+
+                                                    // Try to break out of showing should allow multiple 
+                                                    // checkboxes to show an element
+
+                                                    break;
                                                 }
                                                 else {
                                                     if (it.checked && UIi.elInteractionType === "HIDE") {
@@ -2334,7 +2339,7 @@ export class FormGenBS {
 
                                                         // here we want to recursively call itself to propigate UIInteractions down the chain
 
-                                                        var telement = document.getElementById(UIi.elIDTarget);
+                                                        // var telement = document.getElementById(UIi.elIDTarget);
 
                                                         // this.DoFormGenInteraction(telement);
                                                     }
@@ -2342,6 +2347,12 @@ export class FormGenBS {
                                                         if (!it.checked && UIi.elInteractionType === "HIDE") {
                                                             // we are gonna make sure something is visible
                                                             thetriggeredelement.style.display = "";// "block";
+                                                        
+                                                            // Try to break out of showing should allow multiple 
+                                                            // checkboxes to show an element
+
+                                                            break;
+
                                                         }
                                                         else {
                                                             // we are gonna make sure something is hidden
@@ -2349,7 +2360,7 @@ export class FormGenBS {
 
                                                             // here we want to recursively call itself to propigate UIInteractions down the chain
 
-                                                            var telement = document.getElementById(UIi.elIDTarget);
+                                                            // var telement = document.getElementById(UIi.elIDTarget);
 
                                                             // this.DoFormGenInteraction(telement);
 
